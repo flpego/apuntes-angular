@@ -1,0 +1,202 @@
+/* Estilos para la sección principal */
+.directivas {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+/* Estilos para el título principal */
+.directivas h1 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para los artículos */
+.directivas__article {
+  margin-bottom: 30px;
+}
+
+/* Estilos para los títulos de los artículos */
+.directivas__title {
+  color: #007bff;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para los párrafos dentro de los artículos */
+.directivas__article p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Estilos para las listas dentro de los artículos */
+.directivas__list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+/* Estilos para los elementos de la lista */
+.directivas__list li {
+  margin-bottom: 10px;
+}
+
+/* Estilos para los botones dentro de los artículos */
+.directivas__article button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Estilos para los botones dentro de los artículos al pasar el mouse sobre ellos */
+.directivas__article button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para los div dentro de los artículos */
+.directivas__article div {
+  margin-bottom: 20px;
+}
+
+/* Estilos para los selects dentro de los artículos */
+.directivas__article select {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+/* Estilos para los párrafos dentro de los div dentro de los artículos */
+.directivas__article div p {
+  margin-bottom: 10px;
+}
+
+/* Estilos para los casos de switch */
+.directivas__article [ngSwitch] {
+  margin-bottom: 10px;
+}
+
+/* Estilos para los casos de switch dentro de los artículos */
+.directivas__article [ngSwitch] p {
+  margin: 5px 0;
+}
+
+/* Estilos para los párrafos dentro de los div dentro de los artículos */
+.directivas__article div p {
+  margin-bottom: 10px;
+}
+
+/* Estilos para los div de resultado del switch dentro de los artículos */
+.directivas__article div [ngSwitch] div {
+  margin-bottom: 10px;
+}
+
+/* Estilos para los párrafos de notas */
+.directivas__article h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para los botones dentro de los párrafos */
+.directivas__article p button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Estilos para los botones dentro de los párrafos al pasar el mouse sobre ellos */
+.directivas__article p button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para los botones dentro de los div de resultados */
+.directivas__article div [ngSwitch] div button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Estilos para los botones dentro de los div de resultados al pasar el mouse sobre ellos */
+.directivas__article div [ngSwitch] div button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para los selects dentro de los artículos */
+.directivas__article select {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para los elementos p dentro de los selects */
+.directivas__article select p {
+  margin: 5px 0;
+}
+
+/* Estilos para los párrafos de notas dentro de los artículos */
+.directivas__article p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* Estilos para los elementos p dentro de los div dentro de los artículos */
+.directivas__article div p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* Estilos para los elementos p dentro de los div de resultados dentro de los artículos */
+.directivas__article div [ngSwitch] div p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para los elementos select dentro de los artículos */
+.directivas__article select {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para los elementos select dentro de los artículos */
+.directivas__article select option {
+  padding: 8px 12px;
+  font-size: 16px;
+}
+
+/* Estilos para los elementos p dentro de los div de resultados dentro de los artículos */
+.directivas__article div [ngSwitch] div p {
+  margin: 5px 0;
+}
+
+/* Estilos para los elementos p dentro de los div dentro de los artículos */
+.directivas__article div p {
+  margin-bottom: 10px;
+}
+
+/* Estilos para los botones dentro de los div dentro de los artículos */
+.directivas__article div button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Estilos para los botones dentro de los div dentro de los artículos al pasar el mouse sobre ellos */
+.directivas__article div button:hover {
+  background-color: #0056b3;
+}

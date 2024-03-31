@@ -1,0 +1,23 @@
+ul{
+    list-style: none;
+    border-radius: 10px;
+}
+li {
+    background-color: greenyellow;
+    padding: 1rem;
+}
+
+.tipado__list li{
+    background-color: #fff;
+
+}
+
+td{
+    padding: 1rem;
+}
+
+tr:nth-child(even){
+    background-color: #d3d3d3;
+}
+
+

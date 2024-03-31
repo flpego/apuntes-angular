@@ -1,0 +1,155 @@
+<section class="directivas">
+  <h1>Clase 04 - Directivas</h1>
+  <article class="directivas__article">
+    <h3 class="directivas__title">Directivas de Atributo</h3>
+    <p>Para referirnos a las directivas de Atributos usamos [] y ()</p>
+    <ul class="directivas__list">
+      <li [ngClass]="value1 ? 'succes' : 'error'">
+        [ngClass]="value1 ? 'succes' : 'error'" // Segun el valor, en este caso
+        booleano, de la variable value1, se evalua que clase CSS aplicar
+      </li>
+      <li [style.background]="error ? ' rgb(241, 91, 91)' : 'green'">
+        [ngStyle]="" // [style.background]="error? 'rgb(241, 91, 91)' : 'green'"
+        // Permite establecer condicionales para cambiar propiedades CSS
+      </li>
+      <li [style.border]="'1px solid green'">
+        (evento) = "evento()"// (click)="changeValue1()"
+        <button (click)="changeValue1()">Change value1</button> // Evento click
+        ejecuta la funcion changeValue1 que alterna su valor true-false
+      </li>
+      <li>
+        <h2>Notas:</h2>
+        <p
+          [ngStyle]="{
+            border: value1 ? '1px solid green' : '1px solid red',
+            'font-size': value1 ? '1.5rem' : '1rem'
+          }"
+        >
+          Un element HTML puede contener [ngClass] y [bgStyle] en el mismo
+          elemento, ademas,podemos declarar ngStyle como un object y alterar mas
+          de 1 propiedad css [ngStyle]="[object object]"
+        </p>
+        <p>
+          Ejemplo: la siguiente linea de codigo altera mas de una propiedad CSS
+          segun el valor de value1. El codigo afecta al parrafo que esta arriba
+          // [ngStyle]=" 'border' : value1 ? '1px solid green' : '1px solid
+          red', 'font-size' : value1? '1.5rem' : '1rem' "
+        </p>
+      </li>
+    </ul>
+  </article>
+  <article class="directivas__article">
+    <h3 class="directivas__title">Directivas Estructurales</h3>
+    <p>
+      Permiten generar HTML a partir de un conjunto de valores, nos referimos a
+      ellas usamos *
+    </p>
+    <div class="directivas__div">
+      <p>
+        *ngFor se utiliza sobre colecciones de objetos []
+        <button (click)="this.show = !this.show">Mostrar Ejemplo</button>
+      </p>
+      <div *ngIf="show">
+        (este div se muestra en base a un condicional ngIf que cambia su valor
+        booleano cuando se da click al button Mostrar Ejemplo)
+        <p>
+          En este ejempo se recorre la coleccion(array) users[] de la lisguiente
+          manera: <br />
+          *ngFor="let user of users"
+        </p>
+        <ul class="directivas__list">
+          <li *ngFor="let user of users">
+            Name:{{ user.name }} - Age:{{ user.age }}
+          </li>
+        </ul>
+        <p>
+          En angular 17 se agrega nueva sintaxis: ☯️(a)for(user of users; track
+          $index)🔑<br />
+          "li"🔑🔑user.age🔑🔑"/li" <br />
+          🔑
+        </p>
+        <ul class="directivas__list">
+          @for(user of users; track $index) {
+          <li>{{ user.name }}</li>
+          }
+        </ul>
+      </div>
+      <div>
+        <h3 class="directivas__title">Switch</h3>
+        <select (change)="onChangeState($event)">
+          <option *ngFor="let state of stateArr" value="{{ state }}">
+            {{ state }}
+          </option>
+        </select>
+        <h4>Swicht escrito de la forma vieja</h4>
+        <div [ngSwitch]="state">
+          <p *ngSwitchCase="'en-camino'">En camino</p>
+          <p *ngSwitchCase="'entregado'">Entregado</p>
+          <p *ngSwitchCase="'en-preparacion'">En preparacion</p>
+        </div>
+        <h4>Swicht escritoa partir de angular 17</h4>
+        <div>
+          @switch (state) { @case ('en-camino') {
+          <p>En camino</p>
+          } @case ('entregado') {
+          <p class="succes">Entregado</p>
+          } @case ('en-preparacion') {
+          <p>En preparacion</p>
+          } }
+        </div>
+      </div>
+    </div>
+    <h3 class="directivas__title">Evento (change) con Switch</h3>
+    <p>
+      El switch evalua el valor del option y en base a eso muestra el color
+      debajo
+    </p>
+    <select (change)="onSelectChange($event)">
+      <option value="blue">blue</option>
+      <option value="red">red</option>
+      <option value="white">white</option>
+      <option value="green">green</option>
+    </select>
+    <div>
+      @switch (color) { @case ('blue') {
+      <p [style.background]="'blue'">blue</p>
+      } @case ('red') {
+      <p [style.background]="'red'">red</p>
+      } @case ('white') {
+      <p [style.background]="'white'">White</p>
+      } @case ('green') {
+      <p [style.background]="'green'">green</p>
+      } }
+    </div>
+  </article>
+  <article class="directivas__article">
+    <h3 class="directivas__title">Pipes</h3>
+    <p>
+      Son funciones propias de Angular, independientes de un componente y
+      reutilizables que pueden se usada en cualquier parte por Ejemplo
+    </p>
+    <p>
+      Cuando utilizamos un Pipe no modificamos el valor del codigo, solo cambia
+      la IU
+    </p>
+    <p>Tambien podemos descargar librerias de Pipes</p>
+    <div>
+      <h4>Ejemplos</h4>
+      <div>
+        <p>
+          En este caso, el Pipe date seria un formater de fecha incluido en
+          Angular
+        </p>
+        <p>
+          Fecha con Pipe: {{ dateNow | date }} lleva un '|' entre la variable de
+          ts y el Pipe date
+        </p>
+        <p>Fecha sin Pipe: {{ dateNow }}</p>
+        <p>{{ dateNow | date : "dd/MM/YYYY" }}</p>
+      </div>
+      <div>
+        {{ titleLong | slice : 0 : 50 | uppercase }}
+      </div>
+    </div>
+  </article>
+</section>

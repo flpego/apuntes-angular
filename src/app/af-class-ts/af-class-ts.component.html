@@ -1,0 +1,62 @@
+<section>
+  <article>
+    <h2>After Class Typescript</h2>
+    <p>
+      Typescript es un superset de javascript. TS viene a complementar a JS en
+      sus faltantes para hacerlo un lenguaje mas robusto lo que permite su uso
+      en proyectos grandes y complejos.
+    </p>
+    <h4>Las caracteristicas que TS agrega son:</h4>
+    <ul class="d-flex">
+      <li>Sistema de Tipos Estáticos</li>
+      <li>Interfaces</li>
+      <li>Decoradores</li>
+      <li>Tipado de Parámetros Rest y Spread</li>
+    </ul>
+  </article>
+  <article>
+    <h4>Tipados</h4>
+    <ul class="tipado__list">
+      <li *ngFor="let tipo of tipado">{{ tipo.tipo }}</li>
+    </ul>
+    <h4>Ejemplos</h4>
+    <div>
+      <table>
+        <thead>
+          <th>Nombre</th>
+          <th>Ejemplo</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ejemplo of ejemplos">
+            <td>{{ ejemplo.ejName }}</td>
+            <td>{{ ejemplo.ej }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+  <article>
+    <h4>Interfaces</h4>
+    <p>
+      Una interfaz es un mecanismo que define la estructura de un objeto. Es una
+      forma poderosa de definir contratos en el código, especificando qué
+      propiedades y métodos debe tener un objeto para que se considere del tipo
+      de esa interfaz
+    </p>
+
+    <p>
+      Algunas características y usos comunes de las interfaces en TypeScript
+      incluyen: Definición de Contratos: Las interfaces permiten definir
+      contratos que especifican qué propiedades y métodos deben tener los
+      objetos que implementan esa interfaz. Reutilización de Código: Las
+      interfaces pueden ser utilizadas para definir tipos que se pueden
+      reutilizar en múltiples lugares dentro del código, lo que promueve la
+      consistencia y la mantenibilidad. Verificación de Tipos: TypeScript
+      utiliza interfaces para realizar verificaciones de tipo estático. Si un
+      objeto no cumple con los requisitos de una interfaz, se generará un error
+      en tiempo de compilación. Implementación de Clases: Las clases en
+      TypeScript pueden implementar interfaces, lo que garantiza que la clase
+      tenga todas las propiedades y métodos requeridos por la interfaz.
+    </p>
+  </article>
+</section>

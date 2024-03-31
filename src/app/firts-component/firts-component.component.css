@@ -1,0 +1,30 @@
+.primer-apunte {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .contador {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+  }
+  
+  .contador button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contador button:hover {
+    background-color: #0056b3;
+  }
+  
+  .contador p {
+    font-size: 18px;
+  }
+  

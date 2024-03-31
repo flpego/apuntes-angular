@@ -1,0 +1,21 @@
+<div class="primer-apunte">
+  <p>firts-component works!</p>
+
+  <h2>Hola primer componente con ng generate componente</h2>
+
+  <h4>Titulo con interpolacion: {{ title }}</h4>
+  <div>
+      <h4>Comporbar edad de: Name: {{ name }} </h4>
+      <p>- Age: {{ age }}</p>
+      <p (click)="ageVerification()">ClikMe</p>
+  </div>
+
+  <div>
+    <h4>Contador</h4>
+    <div class="contador">
+      <button (click)="decreaseCount()">-</button>
+      <p>Count: {{ count }}</p>
+      <button (click)="incrementCount()">+</button>
+    </div>
+  </div>
+</div>

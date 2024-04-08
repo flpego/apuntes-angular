@@ -8,10 +8,10 @@ import { users } from '../data/users.data.js';
 export class DirectivasComponent {
   value1 = true;
 
-  error = true;
+  error = false;
 
   changeValue1() {
-    return (this.value1 = !this.value1);
+    return this.value1 = !this.value1;
   }
   // directivas estructurales
   show = false;

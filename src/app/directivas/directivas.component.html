@@ -8,9 +8,11 @@
         [ngClass]="value1 ? 'succes' : 'error'" // Segun el valor, en este caso
         booleano, de la variable value1, se evalua que clase CSS aplicar
       </li>
-      <li [style.background]="error ? ' rgb(241, 91, 91)' : 'green'">
+      <li [style.background]="error ? 'red' : 'green'">
+        Ahora error es {{ error }}
         [ngStyle]="" // [style.background]="error? 'rgb(241, 91, 91)' : 'green'"
         // Permite establecer condicionales para cambiar propiedades CSS
+        <button (click)="error = !error">Has Error</button>
       </li>
       <li [style.border]="'1px solid green'">
         (evento) = "evento()"// (click)="changeValue1()"
@@ -148,6 +150,7 @@
         <p>{{ dateNow | date : "dd/MM/YYYY" }}</p>
       </div>
       <div>
+        En el siguiente ejemplo se aplicaron 2 pipes; slice : 0 : 50| uppercase , slice para cortar el arr.
         {{ titleLong | slice : 0 : 50 | uppercase }}
       </div>
     </div>

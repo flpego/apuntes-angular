@@ -1,8 +1,8 @@
 export interface IUser {
-  name: string;
+ name: string;
   email: string;
   conectado: boolean;
-  age: number;
+  // age: number;
 }
 
 export class User implements IUser {
@@ -10,6 +10,9 @@ export class User implements IUser {
     public name: string,
     public email: string,
     public conectado: boolean,
-    public age: number
+    private pass: string
   ) {}
+  changeName(newPass : string): void {
+     this.pass = newPass;
+  }
 }

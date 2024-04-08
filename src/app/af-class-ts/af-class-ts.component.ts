@@ -12,9 +12,14 @@ export class AfClassTsComponent implements OnInit{
   }
   tipado = tipado;
   ejemplos = ejemplos;
+  user1: User = new User ( "juan", "juan@g.com",  false, "12345" );
 
   createUser(){
-    const user1 = new User ( "juan", "juan@g.com",  false, 17 )
-    return user1
+    this.user1 = new User ( "juan", "juan@g.com",  false, "12345" )
+    return this.user1;
+  }
+  hasChangePass() {
+    let newPass:string = prompt("introduce nuevo nombre") || "Vuelve a intentarlo"
+    this.user1.changeName(newPass); 
   }
 }
